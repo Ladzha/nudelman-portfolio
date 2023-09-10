@@ -21,19 +21,62 @@ if(navClose){
 
 /* ===================== REMOVE MENU MOBILE ===================== */
 
+// Select all elements with class .nav-link
 const navLink = document.querySelectorAll('.nav-link')
+
 function linkAction(){
   const navMenu = document.getElementById('nav-menu')
   navMenu.classList.remove('show-menu')
-  //When we click on each nav_link, we remove the show-menu class
-  navLink.forEach(element => element.addEventListener('click', linkAction))
 }
 
+//When we click on each nav_link, we remove the show-menu class
+navLink.forEach(element => element.addEventListener('click', linkAction))
+
+/* ===================== QUALIFICATION TABS ===================== */
+const tabs=document.querySelectorAll('[data-target]');
+const tabContents = document.querySelectorAll('[data-content]');
+
+tabs.forEach((tab) => {
+  tab.addEventListener('click', ()=>{
+    const target = document.querySelector(tab.dataset.target);
+
+  tabContents.forEach((tabContent)=>{
+    tabContent.classList.remove('qualification-active')
+  });
+
+  target.classList.add('qualification-active')
+
+  tabs.forEach(tab=>{
+    tab.classList.remove('qualification-active')
+  })
+
+  tab.classList.add('qualification-active')
+
+})
+
+})
+
+
+/* =================== PORTFOLIO SWIPER =================== */
+
+let swiper = new Swiper(".mySwiper", {
+  cssMode: true,
+  loop:true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable:true,
+  },
+  mousewheel: true,
+  keyboard: true,
+});
 
 /* ===================== ACCORDION SKILL ===================== */
 
 
-/* ===================== QUALIFICATION TABS ===================== */
 
 
 /* ===================== SEr TABS ===================== */

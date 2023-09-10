@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+  <!-- =================== SWIPER CSS =================== -->
+ 
+  <link href="
+  https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.css
+  " rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <title>Portfolio</title>
 </head>
-
-
 
 <body>
   <header class="header" id="header">
@@ -180,12 +185,12 @@
 
     <div class="qualification-container container">
       <div class="qualification-tabs">
-        <div class="qualification-button button-flex">
+        <div class="qualification-button button-flex qualification-active" data-target="#education">
           <i class="uil uil-book-alt qualification-icon"></i>
           Education
         </div>
 
-        <div class="qualification-button button-flex">
+        <div class="qualification-button button-flex" data-target="#work">
           <i class="uil uil-bag nav-icon qualification-icon"></i>
           Experience
         </div>
@@ -193,8 +198,8 @@
 
 
       <div class="qualification-section">
-<!-- ===================== QUALIFICATION CONTENT 1 ===================== -->
-      <div class="qualification-content">
+      <!-- ===================== QUALIFICATION CONTENT 1 ===================== -->
+      <div class="qualification-content qualification-active" data-content id="education">
 <!-- ===================== QUALIFICATION 1 ===================== -->
         <div class="qualification-data">
 
@@ -216,16 +221,10 @@
           </div>
         </div>
 
-
         <!-- ===================== QUALIFICATION 2 ===================== -->
         <div class="qualification-data">
 
           <div></div>
-
-          <div>
-            <span class="qualification-rounder"></span>
-            <span class="qualification-line"></span>
-          </div>
 
           <div>
             <h3 class="qualification-title">Game developer</h3>
@@ -235,6 +234,12 @@
             <div class="qualification-calendar">
               <i class="uil uil-calendar-alt"></i>2022-2023
             </div>
+
+            <div>
+              <span class="qualification-rounder"></span>
+              <span class="qualification-line"></span>
+            </div>
+
           </div>
         </div>
 
@@ -259,12 +264,10 @@
           </div>
         </div>
 
-
       </div>
-
-<!-- ===================== QUALIFICATION CONTENT 2 ===================== -->
-      <div class="qualification-content">
-        <!-- ===================== QUALIFICATION 2 ===================== -->
+      <!-- ===================== QUALIFICATION CONTENT 2 ===================== -->
+      <div class="qualification-content" data-content id="work">
+<!-- ===================== QUALIFICATION 4 ===================== -->
         <div class="qualification-data">
 
           <div>
@@ -283,7 +286,6 @@
               <i class="uil uil-calendar-alt"></i>2004-2010
             </div>
           </div>
-        </div>
 
         <!-- ===================== QUALIFICATION 2 ===================== -->
         <div class="qualification-data">
@@ -326,13 +328,13 @@
             </div>
           </div>
         </div>
-
+      </div>
         
       </div>
 
       </div>
-
     </div>
+  </section>
 <!-- 
     <div class="education-card">
       <p class='action bold-text'>Full stack developer</p>
@@ -352,7 +354,7 @@
       <p class='date'>2004-2010</p>
     </div> -->
 
-  </section>
+
 
    <!-- ===================== EXPERIENCE ===================== -->
   <section class="experience-container container grid" id="experience">
@@ -430,23 +432,77 @@
 
  <!-- ===================== PORTFOLIO ===================== -->
 
-  <section class="project-container" id="projects">
+  <section class="portfolio section" id="portfolio">
 
     <h2 class="section-title">Portfolio</h2>
     <span class="section-subtitle">Here are a few projects.</span>
 
-    <div class="project-card">
-      <p class='name bold-text'>Diana Wynne Jones tribute website</p>
+    <div class="portfolio-container container swiper mySwiper">
+      <div class="swiper-wrapper">
+      <!-- =================== PORTFOLIO 1 =================== -->
+      <div class="portfolio-content grid swiper-slide">
+        <img src="img/to-do-screen-1.png" alt="to-do-list" class="portfolio-img">
+        <h3 class="portfolio-title">Diana Wynne Jones tribute website</h3>
+        <p class="portfolio-description">The project was created during my Full Stack Developer Coding Bootcamp at Developers.Institute in Tel-Aviv. The website serves as a tribute to Diana Wynne Jones, a British writer known for her captivating fantasy novels geared towards both children and adults. The site's purpose is to illuminate her life, literary contributions, and the enchanting impact she made on the realm of literature.</p>
+        <a href="https://ladzha.github.io/diana-jones/" class="button button-flex button-small portfolio-button">Demo<i class="uil uil-arrow-right button-icon"></i></a>
+      </div>
+
+      <!-- =================== PORTFOLIO 2 =================== -->
+      <div class="portfolio-content grid swiper-slide">
+        <img src="img/to-do-screen-1.png" alt="to-do-list" class="portfolio-img">
+        <h3 class="portfolio-title">Todo list</h3>
+        <p class="portfolio-description">I developed a straightforward yet functional mini-project—a basic todo list. With a minimalistic design, the todo list allows users to easily add tasks, mark them as completed, and remove them as needed. It's a practical tool for organizing daily tasks and getting things done efficiently.</p>
+        <a href="https://ladzha.github.io/todo-list/" class="button button-flex button-small portfolio-button">Demo<i class="uil uil-arrow-right button-icon"></i></a>
+      </div>
+
+      <!-- =================== PORTFOLIO 3 =================== -->
+      <div class="portfolio-content grid swiper-slide">
+        <img src="img/to-do-screen-1.png" alt="to-do-list" class="portfolio-img">
+        <h3 class="portfolio-title">Quotes</h3>
+        <p class="portfolio-description">quotes quotesquotesquo tesquotes quotes.</p>
+        <a href="https://ladzha.github.io/todo-list/" class="button button-flex button-small portfolio-button">Demo<i class="uil uil-arrow-right button-icon"></i></a>
+      </div>
+
+      <!-- =================== PORTFOLIO 4 =================== -->
+      <div class="portfolio-content grid swiper-slide">
+        <img src="img/to-do-screen-1.png" alt="to-do-list" class="portfolio-img">
+        <h3 class="portfolio-title">Avatar creator</h3>
+        <p class="portfolio-description">The project came to life during a hackathon within a Coding Bootcamp. I conceptualized an Avatar Creator that empowers users to design their unique avatars by mixing and matching various facial components. The process starts with selecting a face shape, followed by choosing from a set of hairstyles. This step-by-step approach allows users to craft avatars that suit their preferences. The illustrations are crafted digitally, adding a distinct touch to each avatar. Users can preserve their creations in the gallery, complete with personalized names, for convenient viewing in the future.</p>
+        <a href="https://ladzha.github.io/todo-list/" class="button button-flex button-small portfolio-button">Demo<i class="uil uil-arrow-right button-icon"></i></a>
+      </div>
+
+      <!-- =================== PORTFOLIO 5 =================== -->
+      <div class="portfolio-content grid swiper-slide">
+        <img src="img/to-do-screen-1.png" alt="to-do-list" class="portfolio-img">
+        <h3 class="portfolio-title">Lula learning platform</h3>
+        <p class="portfolio-description">I've created a web platform called "Lula - Learn Real Language from Real People" with a core focus on language education and the unique approach of learning foreign languages through genuine interactions. The concept revolves around harnessing the power of audio records, recognizing that many individuals thrive in language learning through auditory experiences.</p>
+        <a href="https://ladzha.github.io/todo-list/" class="button button-flex button-small portfolio-button">Demo<i class="uil uil-arrow-right button-icon"></i></a>
+      </div>
+
+      </div>
+
+      <!--=== Arrows === -->
+      <div class="swiper-button-next">
+        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+      <div class="swiper-button-prev">
+        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
+      <!--=== Paginator === -->
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+    <!-- <div class="project-card">
+      <p class='name bold-text'>Avatar creator</p>
       <img src="#" alt="Tribute website preview">
-      <p class='description'>The project was created during my Full Stack Developer Coding Bootcamp at Developers.Institute in Tel-Aviv. The website serves as a tribute to Diana Wynne Jones, a British writer known for her captivating fantasy novels geared towards both children and adults. The site's purpose is to illuminate her life, literary contributions, and the enchanting impact she made on the realm of literature.</p>
+      <p class='description'>The project came to life during a hackathon within a Coding Bootcamp. I conceptualized an Avatar Creator that empowers users to design their unique avatars by mixing and matching various facial components. The process starts with selecting a face shape, followed by choosing from a set of hairstyles. This step-by-step approach allows users to craft avatars that suit their preferences. The illustrations are crafted digitally, adding a distinct touch to each avatar. Users can preserve their creations in the gallery, complete with personalized names, for convenient viewing in the future.</p>
       <p class='mini-title bold-text'>Tools</p>
       <ul class="tool-list">
         <li class="tool">HTML5</li>
         <li class="tool">CSS3</li>
       </ul>
-      <a href="https://ladzha.github.io/diana-jones/" class="link"> <i class="fa-solid fa-link"></i></a>
-    </div>
-
+      <a href="https://ladzha.github.io/todo-list/" class="link"> <i class="fa-solid fa-link"></i></a>
+    </div> -->
+<!-- 
     <div class="project-card">
       <p class='name bold-text'>Avatar creator</p>
       <img src="#" alt="Avatar creator preview">
@@ -471,16 +527,16 @@
         <li class="tool">HTML5</li>
         <li class="tool">CSS3</li>
         <li class="tool">React.js</li>
-        <!-- https://www.loom.com/share/6fee74299b2f4361a6106299a0cda6a6?sid=99f1be5c-dd9b-4e92-9a86-17e4836ae94f -->
+        https://www.loom.com/share/6fee74299b2f4361a6106299a0cda6a6?sid=99f1be5c-dd9b-4e92-9a86-17e4836ae94f
 
 
       </ul> 
       <a href="https://ladzha.github.io/todo-list/" class="link"> <i class="fa-solid fa-link"></i></a>
       
-    </div>
+    </div> -->
 
-    <div class="project-card">
-      <p class='name bold-text'>Lula learning platphorm </p>
+    <!-- <div class="project-card">
+      <p class='name bold-text'>Lula learning platform</p>
       <img src="#" alt="Lula preview">
       <p class='description'>I've created a web platform called "Lula - Learn Real Language from Real People" with a core focus on language education and the unique approach of learning foreign languages through genuine interactions. The concept revolves around harnessing the power of audio records, recognizing that many individuals thrive in language learning through auditory experiences.
 
@@ -502,7 +558,7 @@
         <li class="tool">ElephantSQL</li>
         <li class="tool">Aws S3</li>
       </ul>
-    </div>
+    </div> -->
 
 
   </section>
@@ -517,25 +573,121 @@
   </section>
 
    <!-- ===================== CONTACT ===================== -->
-  <section class="contact-container" id="contact">
+  <section class="contact section" id="contact">
     <h2 class="section-title">Contact</h2>
     <span class="section-subtitle">Write me a message</span>
-      <form class='form column'>
-          <label class='label'>You name</label>
-          <input class='input' type='text' name='user_name' placeholder='Enter your name'/>
-          <label class='label'>Your email</label>
-          <input class='input' type='email' name = 'user_email' placeholder='Enter your email'/>
-          <label class='label'>Message</label>   
-          <textarea class='input' name='message' placeholder='Enter your message'> </textarea>
-          <button class='button' type="submit" value="Send"> Send </button> 
+
+    <div class="contact-container container grid">
+      <div>
+        
+        <div class="contact-information">
+          <i class="uil uil-phone contact-icon"></i>
+          <div>
+            <h3 class="contact-title">Phone</h3>
+            <span class="contact-subtitle">058-71-69-7-69</span>
+          </div>
+        </div>
+
+        <div class="contact-information">
+          <i class="uil uil-envelope contact-icon"></i>
+          <div>
+            <h3 class="contact-title">Email</h3>
+            <span class="contact-subtitle">allanudelman@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-information">
+          <i class="uil uil-map-marker contact-icon"></i>
+          <div>
+            <h3 class="contact-title">Location</h3>
+            <span class="contact-subtitle">Israel</span>
+          </div>
+        </div>
+
+      </div>
+
+      <form class='contact-form grid'>
+        <div class="contact-inputs grid">
+
+          <div class="contact-content">
+            <label class='contact-label'>You name</label>
+            <input class='contact-input' type='text' name='user_name'/>
+          </div>
+
+          <div class="contact-content">
+            <label class='contact-label'>Your email</label>
+            <input class='contact-input' type='email' name = 'user_email'/>
+          </div>
+
+          <div class="contact-content">
+            <label class='contact-label'>Message</label>   
+            <textarea class='contact-input' name='message' cols ='0' row="7"> </textarea>
+          </div>
+
+          <div>
+            <a href="#" class="button button-flex">Send Message 
+              <i class="uil uil-message button-icon"></i>
+            </a>
+          </div>
+
+        </div>
+
       </form>
 
+    </div>
+
   </section>
+
   <button class='button'><a href="#about">Up</a></button>
 
-  <footer>© 2023 Privacy policy</footer>
+  <footer class="footer">
+    <div class="footer-bg">
+      <div class="footer-container container grid">
+        <div>
+          <h1 class="footer-title">Alla</h1>
+          <span class="footer-subtitle">Full Stack Developer</span>
+        </div>
+
+        <ul>
+          <li>
+            <a href="#skills" class="footer-link">Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="footer-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact" class="footer-link">Contact</a>
+          </li>
+          
+        </ul>
+
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/alla-nudelman/" target=_blank class="footer-social-icon">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://github.com/Ladzha" target=_blank class="footer-social-icon">
+            <i class="uil uil-github-alt"></i>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2023 Privacy policy</p>
+    </div>
+  </footer>
+  <i class="uil uil-arrow-up"></i>
+  
   <script src="https://kit.fontawesome.com/7857c25408.js" crossorigin="anonymous"></script>
+
+  <!-- =================== SWIPER JS =================== -->
+
+  <script src="
+  https://cdn.jsdelivr.net/npm/swiper@10.2.0/swiper-bundle.min.js
+  "></script>
+
   <script src="main.js" crossorigin="anonymous"></script>
+
 </main>
 </body>
 </html>
