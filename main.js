@@ -11,13 +11,26 @@ if(navToggle){
   })
 }
 
-/* ====== HIDE SHOW  ====== */
+/* ====== MENU HIDDEN  ====== */
 /*Validate if constant exist*/
 if(navClose){
   navClose.addEventListener('click', ()=>{
     navMenu.classList.remove('show-menu')
   })
 }
+
+/* ===================== REMOVE MENU MOBILE ===================== */
+
+// Select all elements with class .nav-link
+const navLink = document.querySelectorAll('.nav-link')
+
+function linkAction(){
+  const navMenu = document.getElementById('nav-menu')
+  navMenu.classList.remove('show-menu')
+}
+
+//When we click on each nav_link, we remove the show-menu class
+navLink.forEach(element => element.addEventListener('click', linkAction))
 
 /* ===================== SCROLL SECTION ACTIVE LINK ===================== */
 
@@ -46,19 +59,6 @@ function scrollHeader(){
 }
 
 window.addEventListener('scroll', scrollHeader)
-
-/* ===================== REMOVE MENU MOBILE ===================== */
-
-// Select all elements with class .nav-link
-const navLink = document.querySelectorAll('.nav-link')
-
-function linkAction(){
-  const navMenu = document.getElementById('nav-menu')
-  navMenu.classList.remove('show-menu')
-}
-
-//When we click on each nav_link, we remove the show-menu class
-navLink.forEach(element => element.addEventListener('click', linkAction))
 
 /* ===================== QUALIFICATION TABS ===================== */
 const tabs=document.querySelectorAll('[data-target]');
