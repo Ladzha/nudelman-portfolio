@@ -21,8 +21,8 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --normal-font-size: .94rem;
+  --small-font-size: .87rem;
   --smaller-font-size: .75rem;
 
 /* Font weight */
@@ -61,8 +61,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: .885rem;
+    --smaller-font-size: .84rem;
   }
 }
 
@@ -449,7 +449,7 @@ bottom: 0;
   text-align: center;
   cursor: pointer;
   padding: 0.9rem;
-  border-radius: .5rem;
+  border-radius: 1.5rem;
   font-weight: var(--font-medium);
 }
 
@@ -476,6 +476,7 @@ bottom: 0;
 .skills-arrow{
   margin-left: auto;
   transition: .4s;
+  
 }
 
 .skill-container{
@@ -484,6 +485,22 @@ bottom: 0;
   gap:1rem;
   margin-bottom: var(--mb-0-5);
 }
+
+.skills-close .skill-list{
+height: 0;
+overflow: hidden;
+}
+
+.skills-open .skill-list{
+  height: max-content;
+  margin-bottom: var(--mb-2-5);
+
+}
+
+.skills-open .skills-arrow{
+  transform: rotate(-180deg);
+}
+
 
 /* ============ QUALIFICATION ============ */
 
@@ -495,8 +512,7 @@ bottom: 0;
 
 .qualification-tabs{
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-evenly;
   margin-bottom: var(--mb-2);
 }
 
@@ -511,13 +527,14 @@ bottom: 0;
 }
 
 .qualification-icon{
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-right: var(--mb-0-25);
 }
 
 .qualification-data{
   display: grid;
   grid-template-columns: 1fr 11fr;
+  /* grid-template-columns: 1fr max-content 1fr; */
   column-gap: 1.5rem;
   margin: 1rem;
 }
@@ -539,13 +556,13 @@ bottom: 0;
   color: var(--text-color-light);
 }
 
-.time-line{
+/* .time-line{
   display: flex;
   justify-content: center;
-}
+} */
 
 .qualification-rounder{
-  /* display: inline-block; */
+  display: inline-block;
   width: 13px;
   height: 13px;
   background-color: var(--first-color);
@@ -555,9 +572,7 @@ bottom: 0;
 .qualification-line{
   display: block;
   width: 1px;
-  height: 120%;
-  /* margin-left: 5px;
-  margin-top: -10px; */
+  height: 100%;
   background-color: var(--first-color);
   transform: translate(6px -7px);
 }
