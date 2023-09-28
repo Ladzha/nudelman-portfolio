@@ -19,8 +19,8 @@
   --body-font: 'Montserrat', sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
+  --h2-font-size: 1.2rem;
+  --h3-font-size: 1.12rem;
   --normal-font-size: .94rem;
   --small-font-size: .9rem;
   --smaller-font-size: .85rem;
@@ -121,7 +121,8 @@ img{
 
 .section-subtitle{
   display: block;
-  font-size: var(--small-font-size);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
   margin-top: var(--mb-0-5);
   margin-bottom: var(--mb-2);
 }
@@ -238,10 +239,13 @@ img{
 bottom: 0;
 }
 
+/*Active menu*/
 .active-link{
   color: var(--first-color);
 }
 
+
+/*Change background header*/
 .scroll-header{
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
@@ -397,7 +401,8 @@ bottom: 0;
 }
 .section-subtitle{
   display: block;
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
   margin-bottom: var(--mb-2);
 }
 
@@ -456,7 +461,7 @@ bottom: 0;
 
 .skills-icon,
 .skills-arrow{
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--first-color);
 }
 
@@ -605,9 +610,9 @@ overflow: hidden;
 }
 
 .portfolio-img{
-  width: 280px;
+  width: 250px;
   border-radius: .5rem;
-  justify-content: center;
+  justify-self: center;
 }
 
 .portfolio-title{
@@ -616,11 +621,17 @@ overflow: hidden;
 }
 
 .portfolio-description{
-  margin-bottom: var(--mb-0-75);
+  margin-bottom: var(--mb-1);
 }
 
 .portfolio-button:hover .button-icon{
   transform: translateX(0.25rem);
+}
+
+
+.swiper {
+  /* width: 600px; */
+  /* height: 300px; */
 }
 
 .swiper-button-prev::after,
@@ -657,9 +668,9 @@ overflow: hidden;
 
 /* ============ CONTACT ============ */
 
-/* .contact-container{
+.contact-container{
   row-gap: 3rem;
-} */
+}
 
 .contact-information{
   display: flex;
@@ -667,7 +678,7 @@ overflow: hidden;
 }
 
 .contact-icon{
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--first-color);
   margin-right: var(--mb-0-75);
 }
@@ -717,7 +728,7 @@ overflow: hidden;
 }
 
 .footer-title{
-  /* font-size: var(--h1-font-size); */
+  font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
 }
 
@@ -748,7 +759,9 @@ overflow: hidden;
   font-size: var(--smaller-font-size);
   text-align: center;
   color: var(--text-color-light);
-  margin-top: var(--mb-2);
+  margin-top: var(--mb-3);
+  margin-bottom: var(--mb-3);
+
 }
 
 .footer-title,
@@ -847,15 +860,16 @@ overflow: hidden;
     margin: 0;
   }
   .section{
-    padding: 6rem 0 2rem;
+    padding: 2rem 0 2rem;
   }
 
   .header{
     top:0;
     bottom: initial;
+    padding: 20px;
+
   }
 
-  .header,
   .main,
   .footer-container{
     padding: 0 1rem;
@@ -926,7 +940,7 @@ overflow: hidden;
   }
 
   .qualification-section{
-    grid-template-columns: .5fr;
+    grid-template-columns: .7fr;
   }
 
   .portfolio-img{
@@ -985,7 +999,7 @@ overflow: hidden;
 
   .qualification-section{
     display: grid;
-    grid-template-columns: .6fr;
+    grid-template-columns: .7fr;
     justify-content: center;
   }
   
@@ -1009,6 +1023,7 @@ overflow: hidden;
   .portfolio-content{
     column-gap: 5rem;
   }
+
 
   .swiper-portfolio-icon{
     font-size: 3.5rem;
