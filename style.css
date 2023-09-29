@@ -556,6 +556,10 @@ overflow: hidden;
   margin-bottom: var(--mb-1);
 }
 
+.bold-text{
+  font-weight: var(--font-semi-bold);
+}
+
 .qualification-calendar{
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
@@ -719,7 +723,7 @@ overflow: hidden;
   padding-top: 2rem;
 }
 .footer-container{
-  row-gap: 3.5rem;
+  row-gap: 3rem;
 }
 
 .footer-bg{
@@ -740,6 +744,7 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .footer-link:hover{
@@ -819,6 +824,48 @@ overflow: hidden;
 /* ============ MEDIA ============ */
 
 /*small devices*/
+
+@media screen and (max-width: 350px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .nav-menu{
+    padding: 2rem .25rem 4rem;
+  }
+
+  .nav-list{
+    column-gap: 0;
+  }
+
+  /* .home-content{
+    grid-template-columns: .25fr 3fr;
+  } */
+
+  /* .home-blob{
+    width: 180px;
+  } */
+
+  .skills-title{
+    font-size: var(--normal-font-size);
+  }
+
+  .qualification-data{
+    gap: .6rem;
+  }
+
+  .qualification-button{
+    font-size: var(--normal-font-size);
+  }
+
+
+  .qualification-tabs {
+      gap: 1rem;
+  }
+
+}
+
+/*medium devices*/
 
 @media screen and (min-width: 568px){
   .home-content{

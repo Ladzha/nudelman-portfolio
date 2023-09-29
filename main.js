@@ -62,7 +62,7 @@ function scrollHeader(){
 window.addEventListener('scroll', scrollHeader)
 
 
-/* ================== SHOW SCROLL TOP ================== */
+// /* ================== SHOW SCROLL TOP ================== */
 function scrollTop(){
   const scrollTop = document.getElementById('scroll-top')
   if(this.scrollY >= 560) scrollTop.classList.add('show-scroll');else scrollTop.classList.remove('show-scroll')
@@ -70,6 +70,13 @@ function scrollTop(){
 
 window.addEventListener('scroll', scrollTop)
 
+/* ================== SHOW SCROLL UP ================== */
+function scrollUp(){
+  const scrollUp = document.getElementById('scroll-up')
+  if(this.scrollY >= 560) scrollUp.classList.add('show-scroll');else scrollUp.classList.remove('show-scroll')
+}
+
+window.addEventListener('scroll', scrollUp)
 
 
 /* ===================== ACCORDION SKILLS ===================== */
