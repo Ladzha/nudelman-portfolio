@@ -881,11 +881,16 @@ overflow: hidden;
 
   .about-container,
   /* .skills-container, */
-  .portfolio-container,
-  .project-container,
+  /* .portfolio-container, */
+  /* .portfolio-content, */
   /* .contact-container, */
   .footer-container{
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-container{
+    grid-template-columns: 1fr 2fr;
+
   }
 
   .qualification-section{
@@ -893,10 +898,15 @@ overflow: hidden;
     grid-template-columns: .6fr;
     justify-content: center;
   }
-  
+
+  .portfolio-img {
+    width: 450px;
 }
 
-/*medium devices*/
+}
+
+
+/*more medium devices*/
 
 @media screen and (min-width: 768px){
   .container{
@@ -995,7 +1005,9 @@ overflow: hidden;
   }
 
   .portfolio-content{
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* align-items: center; */
+
   }
 
   .footer-container{

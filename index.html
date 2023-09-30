@@ -535,7 +535,7 @@
       <div class="swiper-button-next">
         <i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
       <!--=== Paginator === -->
-      <div class="swiper-pagination"></div>
+      <!-- <div class="swiper-pagination"></div> -->
 
     </div>
 
@@ -581,17 +581,17 @@
 
           <div class="contact-content">
             <label class='contact-label'>You name</label>
-            <input class='contact-input' type='text' name='user_name'/>
+            <input class='contact-input' type='text' name='user_name' id="user_name"/>
           </div>
 
           <div class="contact-content">
             <label class='contact-label'>Your email</label>
-            <input class='contact-input' type='email' name = 'user_email'/>
+            <input class='contact-input' type='email' name = 'user_email' id="user_email"/>
           </div>
 
           <div class="contact-content">
             <label class='contact-label'>Message</label>   
-            <textarea class='contact-input' name='message' cols ='0' row="7"> </textarea>
+            <textarea class='contact-input' name='message' cols ='0' row="7" id="message"> </textarea>
           </div>
 
           <div>
@@ -668,6 +668,17 @@
 
 
   <script src="main.js" crossorigin="anonymous"></script>
+
+  <!-- ================ SEND EMAIL ================ -->
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("hjzuAvyXM_HWZftw8");
+    })();
+  </script>
 
 </main>
 </body>
