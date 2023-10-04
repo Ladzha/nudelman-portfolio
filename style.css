@@ -377,6 +377,7 @@ bottom: 0;
   align-items: center;
 }
 
+
 /* ============ ABOUT ============ */
 
 .about-description{
@@ -632,6 +633,14 @@ overflow: hidden;
   transform: translateX(0.25rem);
 }
 
+.button-set{
+  display: flex;
+  gap: 1rem;
+}
+
+.swiper-wrapper{
+  margin-bottom: -2rem;
+}
 
 .swiper {
   /* width: 600px; */
@@ -900,7 +909,7 @@ overflow: hidden;
   }
 
   .portfolio-img {
-    width: 450px;
+    width: 400px;
 }
 
 }
