@@ -891,7 +891,7 @@ overflow: hidden;
   .about-container,
   /* .skills-container, */
   /* .portfolio-container, */
-  /* .portfolio-content, */
+  .portfolio-content,
   /* .contact-container, */
   .footer-container{
     grid-template-columns: repeat(2, 1fr);
@@ -904,7 +904,7 @@ overflow: hidden;
 
   .qualification-section{
     display: grid;
-    grid-template-columns: .6fr;
+    grid-template-columns: .7fr;
     justify-content: center;
   }
 
