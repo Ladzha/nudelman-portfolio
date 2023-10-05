@@ -639,7 +639,7 @@ overflow: hidden;
 }
 
 .swiper-wrapper{
-  margin-bottom: -2rem;
+  margin-bottom: -1rem;
 }
 
 .swiper {
@@ -892,7 +892,7 @@ overflow: hidden;
   /* .skills-container, */
   /* .portfolio-container, */
   .portfolio-content,
-  /* .contact-container, */
+  .contact-container, 
   .footer-container{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -942,7 +942,7 @@ overflow: hidden;
   }
 
   .nav{
-    height: calc(var(--header-height) + 1,5rem);
+    height: calc(var(--header-height) + 1.5rem);
     column-gap: 1rem;
   }
 
@@ -977,7 +977,7 @@ overflow: hidden;
     margin-left: 3rem;
   }
 
-  .about-container{
+  /* .about-container{
     column-gap: 5rem;
   }
 
@@ -995,10 +995,13 @@ overflow: hidden;
 
   .about-buttons{
     justify-content: initial;
-  }
+  } */
 
   .qualification-tabs{
     justify-content: center;
+    gap: 2rem;
+    margin-left: 3rem;
+
   }
 
   .qualification-button{
