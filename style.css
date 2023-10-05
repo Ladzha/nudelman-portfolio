@@ -10,8 +10,8 @@
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --input-color: hsl(var(--hue-color), 70%, 95%);
+  --body-color: hsl(var(--hue-color), 60%, 97%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 99%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
@@ -268,7 +268,7 @@ bottom: 0;
 }
 
 .home-content{
-  /* grid-template-columns: .5fr 3fr; */
+  grid-template-columns: .5fr 3fr;
   padding-top:3.5rem;
   align-items: center;
 }
@@ -847,6 +847,22 @@ overflow: hidden;
     column-gap: 0;
   }
 
+  .footer-links{
+    display: none;
+  }
+
+  .footer-title{
+    display: none;
+  }
+
+  .footer-subtitle{
+    display: none;
+  }
+  
+  .footer-copy{
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
   /* .home-content{
     grid-template-columns: .25fr 3fr;
   } */
@@ -874,6 +890,26 @@ overflow: hidden;
 
 }
 
+@media screen and (max-width: 568px){
+  .footer-links{
+    display: none;
+  }
+
+  .footer-title{
+    display: none;
+  }
+
+  .footer-subtitle{
+    display: none;
+  }
+  
+  .footer-copy{
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+
 /*medium devices*/
 
 @media screen and (min-width: 568px){
@@ -892,8 +928,7 @@ overflow: hidden;
   /* .skills-container, */
   /* .portfolio-container, */
   .portfolio-content,
-  .contact-container, 
-  .footer-container{
+  .contact-container{
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -901,6 +936,11 @@ overflow: hidden;
     grid-template-columns: 1fr 2fr;
 
   }
+
+  .footer-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 
   .qualification-section{
     display: grid;
@@ -1018,7 +1058,7 @@ overflow: hidden;
 
   .portfolio-content{
     grid-template-columns: repeat(2, 1fr);
-    /* align-items: center; */
+    align-items: center;
 
   }
 
@@ -1048,6 +1088,13 @@ overflow: hidden;
 /*large devices*/
 
 @media screen and (min-width: 968px){
+
+  .header,
+  .main,
+  .footer-container{
+    padding: 0;
+  }
+
   .home-content{
     grid-template-columns: max-content 1fr 1fr;
   }
@@ -1065,7 +1112,7 @@ overflow: hidden;
   .project-container,
   /* .contact-container, */
   .footer-container{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .qualification-section{
@@ -1117,7 +1164,7 @@ overflow: hidden;
   }
 
   .contact-inputs{
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 
 
