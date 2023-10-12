@@ -264,7 +264,7 @@ bottom: 0;
 /* ============ HOME ============ */
 
 .home-container{
-  gap:1rem;
+  gap: 1rem;
 }
 
 .home-content{
@@ -863,13 +863,14 @@ overflow: hidden;
     padding: 1rem;
     padding-bottom: 2rem;
   }
-  /* .home-content{
-    grid-template-columns: .25fr 3fr;
-  } */
+  .home-content{
+    grid-template-columns: .5fr 3fr;
+  }
 
-  /* .home-blob{
+ .home-photo-img{
     width: 180px;
-  } */
+    height: 190px;
+  }
 
   .skills-title{
     font-size: var(--normal-font-size);

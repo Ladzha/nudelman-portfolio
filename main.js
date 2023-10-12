@@ -56,7 +56,8 @@ window.addEventListener('scroll', scrollActive)
 /* ===================== CHANGE BACKGROUND HEADER ===================== */
 function scrollHeader(){
   const nav = document.getElementById('header')
-  if(this.scrollY >= 200) nav.classList.add('scroll-header');else nav.classList.remove('scroll-header')
+  if(this.scrollY >= 200) nav.classList.add('scroll-header');
+  else nav.classList.remove('scroll-header')
 }
 
 window.addEventListener('scroll', scrollHeader)
@@ -65,7 +66,8 @@ window.addEventListener('scroll', scrollHeader)
 // /* ================== SHOW SCROLL TOP ================== */
 function scrollTop(){
   const scrollTop = document.getElementById('scroll-top')
-  if(this.scrollY >= 560) scrollTop.classList.add('show-scroll');else scrollTop.classList.remove('show-scroll')
+  if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); 
+  else scrollTop.classList.remove('show-scroll')
 }
 
 window.addEventListener('scroll', scrollTop)
@@ -73,7 +75,8 @@ window.addEventListener('scroll', scrollTop)
 /* ================== SHOW SCROLL UP ================== */
 function scrollUp(){
   const scrollUp = document.getElementById('scroll-up')
-  if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+  if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); 
+  else scrollUp.classList.remove('show-scroll')
 }
 
 window.addEventListener('scroll', scrollUp)
@@ -145,4 +148,60 @@ let swiper = new Swiper(".mySwiper", {
 
 
 
-/* ===================== SEr TABS ===================== */
+/* ===================== SEND EMAIL  ===================== */
+
+
+
+
+
+function sendEmail(){
+
+  emailjs.init("hjzuAvyXM_HWZftw8");
+
+  const name = document.getElementById('user_name').value
+  const email = document.getElementById('user_email').value
+  const message = document.getElementById('message').value
+
+  // const templateParams={
+  //   name,
+  //   email,
+  //   message,
+  // }
+
+  const serviceID = 'service_9ngabai';
+  const templateID = 'template_dgix9t8';
+
+
+  const templateParams = {
+    name: "Recipient Name",
+    email: "recipient@example.com",
+    message: "This is the email message content.",
+  };
+
+  emailjs
+    .send(serviceID, templateID, templateParams)
+    .then((response) => {
+      console.log("Email sent successfully:", response);
+
+    })
+    .catch((error) => {
+      console.error("Email could not be sent:", error);
+    });
+
+
+
+
+
+// emailjs
+//   .send(serviceID, templateID, templateParams)
+//   .then((response) => {
+
+//     document.getElementById('user_name').value ="";
+//     document.getElementById('user_email').value="";
+//     document.getElementById('message').value="";
+//     alert("Your message has been sent successfully");
+//     console.log('SUCCESS!', response.status, response.text);
+//   })
+//   .catch((err) => console.log(err));
+
+}

@@ -11,7 +11,20 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("hjzuAvyXM_HWZftw8");
+    })();
+  </script>
+
+  
   <title>Portfolio</title>
+
 </head>
 
 <body>
@@ -56,25 +69,21 @@
   <section class="home section" id="home">
     <div class="home-container container grid">
       <div class="home-content grid">
-        <!-- <div> -->
-          <div class="home-social">
-            <a href="https://www.linkedin.com/in/alla-nudelman/" target=_blank class="home-social-icon">
-              <i class="uil uil-linkedin-alt"></i>
-            </a>
-            <a href="https://github.com/Ladzha" target=_blank class="home-social-icon">
-              <i class="uil uil-github-alt"></i>
-            </a>
+        <div class="home-social">
+          <a href="https://www.linkedin.com/in/alla-nudelman/" target=_blank class="home-social-icon">
+            <i class="uil uil-linkedin-alt"></i>
+          </a>
+          <a href="https://github.com/Ladzha" target=_blank class="home-social-icon">
+            <i class="uil uil-github-alt"></i>
+          </a>
+
+          <a href="mailto:allanudelman@gmail.com?subject=Your%20Subject&body=Your%20Message" target=_blank class="home-social-icon">
+            <i class="uil uil-envelope"></i>
+          </a>
+        </div>
   
-            <a href="mailto:allanudelman@gmail.com?subject=Your%20Subject&body=Your%20Message" target=_blank class="home-social-icon">
-              <i class="uil uil-envelope"></i>
-            </a>
-          </div>
-  
-          <div class="home-img">
-            <div class="home-blob">
-              <img src="img/profile-foto.png" alt="profile-foto-png" class="home-photo-img">
-            </div>
-          </div>
+        <div class="home-img">
+          <img src="img/profile-foto.png" alt="profile-foto-png" class="home-photo-img">
         </div>
 
         <div class="home data">
@@ -85,11 +94,14 @@
           </p>
           <div class="button-container">
             <a href="#contact" class='button button-flex'>Contact me <i class="uil uil-message button-icon"></i></a>
-
             <a download="" href="pdf/Alla_Nudelman_CV.pdf" class='button button-flex'>Download CV <i class="uil uil-download-alt button-icon"></i></a> 
           </div> 
+        </div>
+
 
         </div>
+
+
 
       </div>
       <!-- <div class="home-scroll">
@@ -616,9 +628,9 @@
           </div>
 
           <div>
-            <a href="#" class="button button-flex">Send Message 
+            <button class="button button-flex" onclick="sendEmail()">Send Message 
               <i class="uil uil-message button-icon"></i>
-            </a>
+            </button>
           </div>
 
         </div>
@@ -695,14 +707,8 @@
 
   <!-- ================ SEND EMAIL ================ -->
 
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function(){
-        emailjs.init("hjzuAvyXM_HWZftw8");
-    })();
-  </script>
+
+
 
 </main>
 </body>
