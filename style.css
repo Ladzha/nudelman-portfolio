@@ -104,6 +104,12 @@ a{
   color: inherit;
 }
 
+button{
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
 img{
   max-width: 100%;
   height: auto;
